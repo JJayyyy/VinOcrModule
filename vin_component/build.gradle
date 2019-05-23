@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 //apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 28
@@ -26,4 +27,13 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "org.jetbrains.anko:anko-sdk25:$anko_version"
+}
+
+publish {
+    userOrg = 'adrianzuo'//bintray.com用户名
+    groupId = 'com.che300'//jcenter上的路径
+    artifactId = 'vin_component'//项目名称
+    publishVersion = '0.0.1'//版本号
+    desc = 'android vin input component'
+    website = 'https://github.com/car300/VinOcrModule'
 }
