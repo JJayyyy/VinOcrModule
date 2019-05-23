@@ -1,7 +1,6 @@
 package com.dede.vin_component.view;
 
 import android.content.Context;
-import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
@@ -9,11 +8,15 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.inputmethod.EditorInfo;
 
+import androidx.annotation.Keep;
+import androidx.appcompat.widget.AppCompatEditText;
+
 /**
  * @author hsh
  * @since 2017/6/19 019 上午 09:43.
  * 车架号输入框，需要{@link VinEditText#addTextChangedListener(VinTextWatcher)}才会格式化车架号，格式 xxxx xxxx xxxx xxxxx
  */
+@Keep
 public class VinEditText extends AppCompatEditText {
 
     public static final String TAG = "VinEditText";

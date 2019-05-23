@@ -9,12 +9,12 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Message
 import android.os.Vibrator
-import android.support.v4.content.ContextCompat
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.KeyEvent
 import android.view.SurfaceHolder
 import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.dede.vinocr.utils.*
 import com.dede.vinocr.view.VinFinderView
 import com.kernal.smartvisionocr.utils.KernalLSCXMLInformation
@@ -23,6 +23,8 @@ import java.util.*
 import java.util.concurrent.ArrayBlockingQueue
 import java.util.concurrent.ThreadPoolExecutor
 import java.util.concurrent.TimeUnit
+
+const val EXTRA_VIN_CODE = "vin"
 
 /**
  *
@@ -227,7 +229,7 @@ class VinOcrActivity : AppCompatActivity(), SurfaceHolder.Callback, Camera.Previ
                         //                            VinOcrActivity.recogResultModelList.get(ViewfinderView.fieldsPosition).resultValue = recogResult;
                         //                            VinOcrActivity.this.runOnUiThread(updateUI);
                         val intent = Intent()
-                        intent.putExtra("vin", recogResult)
+                        intent.putExtra(EXTRA_VIN_CODE, recogResult)
                         val bundle = Bundle()
                         bundle.putSerializable("result", vinRecogResult)
                         intent.putExtras(bundle)

@@ -23,7 +23,6 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ScrollView;
 
-
 import com.dede.vin_component.R;
 
 import org.jetbrains.anko.DimensionsKt;
@@ -38,7 +37,7 @@ public class VinKeyboard {
     private EditText mVinEditView;
     private Activity mActivity;
     private FrameLayout mContentView;
-    private onSureClickListener mOnSureClickListener;
+    private OnSureClickListener mOnSureClickListener;
     private SoftInputChangeListener listener;
     private boolean isShow = false;
 
@@ -251,8 +250,8 @@ public class VinKeyboard {
      * @author gengqiquan
      * @date 2017/6/1 下午2:39
      */
-    public void setOnSureClicklistener(onSureClickListener sureClicklistener) {
-        mOnSureClickListener = sureClicklistener;
+    public void setOnSureClicklistener(OnSureClickListener onSureClickListener) {
+        mOnSureClickListener = onSureClickListener;
     }
 
     public void hideKeyboard() {
@@ -302,16 +301,6 @@ public class VinKeyboard {
     private void hideSystemKeyboard(Context context, View v) {
         InputMethodManager inputManger = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         inputManger.hideSoftInputFromWindow(v.getWindowToken(), 0);
-    }
-
-    /**
-     * 返回true表示调用者拦截事件自己处理
-     *
-     * @author gengqiquan
-     * @date 2017/6/1 下午2:39
-     */
-    public interface onSureClickListener {
-        boolean onClick(EditText v);
     }
 
 

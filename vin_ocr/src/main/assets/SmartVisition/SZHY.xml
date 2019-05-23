@@ -384,11 +384,11 @@
 
  <Template ID="SV_ID_YYZZ_MOBILEPHONE" DigitalID="4" Name="手机" TextType="1">
     <!--图像预处理信息描述-->
-    <ImagePreProcessingList PreProcMethodNum="4">
+    <ImagePreProcessingList PreProcMethodNum="5">
 
       <ImageProcessingList Id="1">
         <ImageProcessing Type="1">
-          <ColorToGray ColorFilter="-1"/>
+          <ColorToGray ColorFilter="1"/>
         </ImageProcessing>
         <ImageProcessing Type="3">
           <!--图像清晰度阈值-->
@@ -407,7 +407,7 @@
 
       <ImageProcessingList Id="2">
         <ImageProcessing Type="1">
-          <ColorToGray ColorFilter="-1"/>
+          <ColorToGray ColorFilter="1"/>
         </ImageProcessing>
         <ImageProcessing Type="3">
           <!--图像清晰度阈值-->
@@ -423,16 +423,12 @@
           <SkewCorrrection MaxAngle="30" MinAngle="-30" MinSkewLimit="0.02" SkewMethod="1" MaxCCW="200" MaxCCH="200" MinCCW="10" MinCCH="10" MinCCWHR="0" MaxCCWHR="80"/>
         </ImageProcessing>
       </ImageProcessingList>
-
-      <ImageProcessingList Id="3">
+	  <ImageProcessingList Id="3">
         <ImageProcessing Type="1">
-          <ColorToGray ColorFilter="-1"/>
+          <ColorToGray ColorFilter="1"/>
         </ImageProcessing>
         <ImageProcessing Type="3">
           <ImageDefinition Method="0" Threshold="25"/>
-        </ImageProcessing>
-        <ImageProcessing Type="51">
-          <ImgInverse ImgBit="8"/>
         </ImageProcessing>
         <ImageProcessing Type="6">
           <ImgFilter Method="1" RadiusNum ="3"/>
@@ -441,22 +437,39 @@
           <ImgEnhance Method="1" Clahe_ClipLimit ="1.2" Clahe_Col="8" Clahe_Row="1"/>
         </ImageProcessing>
         <ImageProcessing Type="2">
-          <GrayToBin Method="6" BlockNum="1"/>
+          <GrayToBin Method="11" BlockNum="1"/>
         </ImageProcessing>
         <ImageProcessing Type="4">
-          <SkewCorrrection MaxAngle="5" MinAngle="-5"/>
+          <SkewCorrrection MaxAngle="30" MinAngle="-30" MinSkewLimit="0.02" SkewMethod="1" MaxCCW="200" MaxCCH="200" MinCCW="10" MinCCH="10" MinCCWHR="0" MaxCCWHR="80"/>
         </ImageProcessing>
       </ImageProcessingList>
-
       <ImageProcessingList Id="4">
         <ImageProcessing Type="1">
-          <ColorToGray ColorFilter="-1"/>
+          <ColorToGray ColorFilter="2"/>
         </ImageProcessing>
         <ImageProcessing Type="3">
           <ImageDefinition Method="0" Threshold="30"/>
         </ImageProcessing>
-        <ImageProcessing Type="51">
-          <ImgInverse ImgBit="8"/>
+        <ImageProcessing Type="6">
+          <ImgFilter Method="1" RadiusNum ="3"/>
+        </ImageProcessing>
+        <ImageProcessing Type="7">
+          <ImgEnhance Method="1" Clahe_ClipLimit ="1.2" Clahe_Col="8" Clahe_Row="1"/>
+        </ImageProcessing>
+        <ImageProcessing Type="2">
+          <GrayToBin Method="3" BlockNum="1"/>
+        </ImageProcessing>
+        <ImageProcessing Type="4">
+          <SkewCorrrection MaxAngle="30" MinAngle="-30" MinSkewLimit="0.02" SkewMethod="1" MaxCCW="200" MaxCCH="200" MinCCW="10" MinCCH="10" MinCCWHR="0" MaxCCWHR="80"/>
+        </ImageProcessing>
+      </ImageProcessingList>
+	  
+      <ImageProcessingList Id="5">
+        <ImageProcessing Type="1">
+          <ColorToGray ColorFilter="3"/>
+        </ImageProcessing>
+        <ImageProcessing Type="3">
+          <ImageDefinition Method="0" Threshold="30"/>
         </ImageProcessing>
         <ImageProcessing Type="6">
           <ImgFilter Method="1" RadiusNum ="3"/>
@@ -561,10 +574,9 @@
         <ImageProcessing Type="2">
 			<GrayToBin Method="6" BlockNum="1"/>               
         </ImageProcessing>
-		<!--<ImageProcessing Type="4">
+		<ImageProcessing Type="4">
           <SkewCorrrection MaxAngle="30" MinAngle="-30" MinSkewLimit="0.02" SkewMethod="1" MaxCCW="200" MaxCCH="200" MinCCW="10" MinCCH="10" MinCCWHR="0" MaxCCWHR="80"/>
         </ImageProcessing>
-      </ImageProcessingList>-->
 	  </ImageProcessingList>
 	  
 	  <ImageProcessingList Id="2">
@@ -583,9 +595,9 @@
         <ImageProcessing Type="2">
           <GrayToBin Method="11" BlockNum="1"/>
         </ImageProcessing>
-		<!--<ImageProcessing Type="4">
+		<ImageProcessing Type="4">
           <SkewCorrrection MaxAngle="30" MinAngle="-30" MinSkewLimit="0.02" SkewMethod="1" MaxCCW="200" MaxCCH="200" MinCCW="10" MinCCH="10" MinCCWHR="0" MaxCCWHR="80"/>
-        </ImageProcessing>-->
+        </ImageProcessing>
       </ImageProcessingList>
 	  
 	  <ImageProcessingList Id="3">
@@ -602,11 +614,11 @@
           <ImgEnhance Method="1" Clahe_ClipLimit ="1.2" Clahe_Col="8" Clahe_Row="1"/>
         </ImageProcessing>
         <ImageProcessing Type="2">
-          <GrayToBin Method="3" BlockNum="1"/>
+          <GrayToBin Method="8" BlockNum="1"/>
         </ImageProcessing>
-		<!--<ImageProcessing Type="4">
+		<ImageProcessing Type="4">
           <SkewCorrrection MaxAngle="30" MinAngle="-30" MinSkewLimit="0.02" SkewMethod="1" MaxCCW="200" MaxCCH="200" MinCCW="10" MinCCH="10" MinCCWHR="0" MaxCCWHR="80"/>
-        </ImageProcessing>-->
+        </ImageProcessing>
       </ImageProcessingList>
 	  
       <ImageProcessingList Id="4">
@@ -623,16 +635,16 @@
           <ImgEnhance Method="1" Clahe_ClipLimit ="1.2" Clahe_Col="8" Clahe_Row="1"/>
         </ImageProcessing>
         <ImageProcessing Type="2">
-          <GrayToBin Method="8" BlockNum="1"/>
+          <GrayToBin Method="6" BlockNum="1"/>
         </ImageProcessing>
-		<!--<ImageProcessing Type="4">
+		<ImageProcessing Type="4">
           <SkewCorrrection MaxAngle="30" MinAngle="-30" MinSkewLimit="0.02" SkewMethod="1" MaxCCW="200" MaxCCH="200" MinCCW="10" MinCCH="10" MinCCWHR="0" MaxCCWHR="80"/>
-        </ImageProcessing>-->
+        </ImageProcessing>
       </ImageProcessingList>
 	  
 	  <ImageProcessingList Id="5">
         <ImageProcessing Type="1">
-          <ColorToGray ColorFilter="-1"/>
+          <ColorToGray ColorFilter="15"/>
         </ImageProcessing>
         <ImageProcessing Type="51">
           <ImgInverse ImgBit="8"/>
@@ -644,11 +656,11 @@
           <ImgEnhance Method="1" Clahe_ClipLimit ="1.2" Clahe_Col="8" Clahe_Row="1"/>
         </ImageProcessing>
         <ImageProcessing Type="2">
-          <GrayToBin Method="6" BlockNum="1"/>
+          <GrayToBin Method="10" BlockNum="1"/>
         </ImageProcessing>
-		<!--<ImageProcessing Type="4">
+		<ImageProcessing Type="4">
           <SkewCorrrection MaxAngle="30" MinAngle="-30" MinSkewLimit="0.02" SkewMethod="1" MaxCCW="200" MaxCCH="200" MinCCW="10" MinCCH="10" MinCCWHR="0" MaxCCWHR="80"/>
-        </ImageProcessing>-->
+        </ImageProcessing>
       </ImageProcessingList>
     </ImagePreProcessingList>
 
@@ -1244,6 +1256,13 @@
     </PostProcessingList>
   </Template>
   <Template ID="SV_ID_VIN_CLOUD" DigitalID="11" Name="VIN码(云端)" TextType="1">
+        <!--全图识别信息描述-->
+    <FullImageRecognizeInfo bResizeImage="1" bTiltCorrection="1" bAutoRotation="1" GrayMethod="0" BinMethod="6" bSupportDeepLearning="1" bSupportHorExpansion="0" bSupportRectExpansion="1">
+      <FullImageLayoutMethodList>
+        <FullImageLayoutMethod Type="1">
+        </FullImageLayoutMethod>
+      </FullImageLayoutMethodList>
+    </FullImageRecognizeInfo>
     <!--图像预处理信息描述-->
     <ImagePreProcessingList PreProcMethodNum="4">
       <ImageProcessingList Id="1">
@@ -1394,6 +1413,13 @@
   </Template>
 
   <Template ID="SV_ID_VIN_MOBILE" DigitalID="12" Name="VIN码(车窗)" TextType="1">
+      <!--全图识别信息描述-->
+    <FullImageRecognizeInfo bResizeImage="1" bTiltCorrection="1" bAutoRotation="1" GrayMethod="0" BinMethod="6" bSupportDeepLearning="0" bSupportHorExpansion="1" bSupportRectExpansion="1">
+      <FullImageLayoutMethodList>
+        <FullImageLayoutMethod Type="1">
+        </FullImageLayoutMethod>
+      </FullImageLayoutMethodList>
+    </FullImageRecognizeInfo>
     <!--图像预处理信息描述-->
     <ImagePreProcessingList PreProcMethodNum="4">
       <ImageProcessingList Id="1">
@@ -1458,7 +1484,7 @@
     </ImagePreProcessingList>
 
     <!--行定位信息描述-->
-    <LineLocation MinNum="1" MaxNum="1" MinLength="300" MaxLength="1500" MinHeight="10" MaxHeight="160" MinSpace="10" MaxSpace="50" LeftPlus="-10" RightPlus="20" TopPlus="-5" BottomPlus="5">
+    <LineLocation MinNum="1" MaxNum="1" MinLength="300" MaxLength="1500" MinHeight="5" MaxHeight="160" MinSpace="10" MaxSpace="50" LeftPlus="-10" RightPlus="20" TopPlus="-5" BottomPlus="5">
       <LineLocationMethodList>
         <LineLocationMethod Type="1">
         </LineLocationMethod>
@@ -1487,6 +1513,7 @@
           <CharRatio CharType="2" WHRatio="60" Charset=""/>
           <!--特殊字符一-->
           <CharRatio CharType="6" WHRatio="35" Charset="1"/>
+		  <CharRatio CharType="6" WHRatio="110" Charset="MW"/>
         </CharRatioList>
      </RecogEngine>
 	 
@@ -1503,6 +1530,7 @@
           <CharRatio CharType="2" WHRatio="60" Charset=""/>
           <!--特殊字符一-->
           <CharRatio CharType="6" WHRatio="35" Charset="1"/>
+		  <CharRatio CharType="6" WHRatio="110" Charset="MW"/>
         </CharRatioList>
       </RecogEngine>  
 	  
@@ -1518,7 +1546,8 @@
           <!--大写字母-->
           <CharRatio CharType="2" WHRatio="60" Charset=""/>
           <!--特殊字符一-->
-          <CharRatio CharType="6" WHRatio="35" Charset="1"/>
+          <CharRatio CharType="6" WHRatio="50" Charset="MW"/>
+		  <CharRatio CharType="6" WHRatio="110" Charset="MW"/>
         </CharRatioList>
       </RecogEngine>
 	  

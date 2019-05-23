@@ -1,17 +1,17 @@
-package com.dede.vinocr.view
+package com.dede.vin_component.view
 
 import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.graphics.Color
-import android.support.annotation.Keep
-import android.support.v4.content.ContextCompat
+import androidx.core.content.ContextCompat
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.annotation.Keep
 import com.dede.vin_component.*
 import org.jetbrains.anko.*
 
