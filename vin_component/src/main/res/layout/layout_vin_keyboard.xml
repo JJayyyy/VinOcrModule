@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="256dp"
+    android:layout_gravity="bottom"
+    android:background="@color/vin_back"
+    android:orientation="vertical"
+    android:theme="@android:style/Theme.NoTitleBar">
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/vin_back"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyBackground="@drawable/selector_key_back"
+        android:keyPreviewHeight="66dp"
+        android:keyPreviewLayout="@layout/layout_keyboard_preview"
+        android:keyTextColor="@color/vin_text1"
+        android:keyTextSize="16dp"
+        android:shadowColor="@color/vin_back"
+        android:shadowRadius="0.0" />
+
+    <TextView
+        android:id="@+id/tv_kb_done"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_vin_key_bottom_bt"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@android:color/white"
+        android:textSize="16dp" />
+</LinearLayout>

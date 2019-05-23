@@ -1,0 +1,6 @@
+<resources>
+    <color name="vin_back">#f1f5f6</color>
+    <color name="vin_text4">#cccccc</color>
+    <color name="vin_text1">#333333</color>
+    <color name="vin_blue">#009def</color>
+</resources>

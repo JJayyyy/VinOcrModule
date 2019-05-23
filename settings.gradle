@@ -1,0 +1,1 @@
+include ':app', ':vin_ocr', ':vin_component'
